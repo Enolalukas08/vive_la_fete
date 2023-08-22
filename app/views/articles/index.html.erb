@@ -3,7 +3,11 @@
     <% @articles.each do |article| %>
       <div class="col-md-4 justify-content-center">
         <div class="card" style="width: 25rem;">
-          <img src="..." class="card-img-top" alt="...">
+          <% if article.photo.present? %>
+            <%= cl_image_tag article.photo.key, height: 300, crop: :fill, cloud_name: 'dpjincxmo', sign_url: true %>
+          <% else %>
+            <%= image_tag "logo.png" %>
+          <% end %>
           <div class="card-body">
               <h5 class="card-title"><%=article.name%></h5>
               <p class="card-text"><%=truncate(article.description, length: 70, separator: ' ', omission: '...')%></p>

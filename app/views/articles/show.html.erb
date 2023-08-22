@@ -3,7 +3,11 @@
 <div class=row>
     <div class="col-md-4">
         <div class="card" style="width: 18rem;">
-         <%= image_tag "flechette.jpg" %>
+          <% if @article.photo.present? %>
+            <%= cl_image_tag @article.photo.key, height: 300, crop: :fill, cloud_name: 'dpjincxmo' %>
+          <% else %>
+            <%= image_tag "logo.png" %>
+          <% end %>
         <img class="img-fluid" alt="">
         <div class="card-body">
           <h2 class="card-title"><%=@article.name%></h2>
