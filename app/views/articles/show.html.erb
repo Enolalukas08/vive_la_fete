@@ -1,10 +1,9 @@
-<h1><%=@article.name%></h1>
-
 <div class=row>
+<h1><%=@article.name%></h1>
     <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 25rem;">
           <% if @article.photo.present? %>
-            <%= cl_image_tag @article.photo.key, height: 300, crop: :fill, cloud_name: 'dpjincxmo' %>
+            <%= cl_image_tag @article.photo.key, height: 300, width: 300, crop: :fill %>
           <% else %>
             <%= image_tag "logo.png" %>
           <% end %>
