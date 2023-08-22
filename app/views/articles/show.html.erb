@@ -1,6 +1,16 @@
 <h1>Ceci est une show</h1>
 
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-  Breakfast
+<div class=row>
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+         <%= image_tag "flechette.jpg" %>
+        <img class="img-fluid" alt="">
+        <div class="card-body">
+          <h2 class="card-title"><%=@article.name%></h2>
+          <p class="card-text"><%=@article.description%></p>
+          <p class="card-text"><%=@article.price%></p>
+          <p class="card-text"><%=@article.user.first_name%></p>
+        </div>
+      </div>
+    </div>
 </div>
-
