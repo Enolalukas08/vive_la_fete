@@ -1,16 +1,16 @@
-<h1><%=@article.name%></h1>
 
-<div class=row>
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-         <%= image_tag "flechette.jpg" %>
-        <img class="img-fluid" alt="">
-        <div class="card-body">
-          <h2 class="card-title"><%=@article.name%></h2>
-          <p class="card-text"><%=@article.description%></p>
-          <p class="card-text"><%=@article.price%></p>
-          <p class="card-text"><%=@article.user.first_name%></p>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="card">
+  <div class="image"><%= image_tag "flechette.jpg" %>
+    <h2 class="title"><%=@article.name%></h2>
+    <p class="description"><%=@article.description%></p>
+    <div class="price">Prix: <%=@article.price%>€</div>
     </div>
-</div>
+  </div>
+</body>
+</html>
