@@ -4,7 +4,7 @@
       <div class="col-md-4 justify-content-center">
         <div class="card" style="width: 25rem;">
           <% if article.photo.present? %>
-            <%= cl_image_tag article.photo.key, height: 300, crop: :fill, cloud_name: 'dpjincxmo', sign_url: true %>
+            <%= cl_image_tag article.photo.key, height: 100, crop: :fill, cloud_name: 'dpjincxmo' %>
           <% else %>
             <%= image_tag "logo.png" %>
           <% end %>
