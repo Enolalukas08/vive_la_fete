@@ -3,8 +3,11 @@
   <% @articles.each do |article| %>
     <div class="col-md-4">
       <div class="card" style="width: 18rem;">
-          <%# if <%= cl_image_tag article.photo.key, height: 300, width: 400, crop: :fill %>
-          <%# ELSE AFFICHER UNE IMAGE GÉNÉRIQUE/PAR DEFAUT%>
+          <% if article.photo.present? %>
+            <%= cl_image_tag article.photo.key, height: 300, crop: :fill, cloud_name: 'dpjincxmo' %>
+          <% else %>
+            <%= image_tag "logo.png" %>
+          <% end %>
         <div class="card-body">
             <h5 class="card-title"><%=article.name%></h5>
             <p class="card-text"><%=truncate(article.description, length: 70, separator: ' ', omission: '...')%></p>
