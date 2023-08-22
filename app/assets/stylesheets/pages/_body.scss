@@ -1,6 +1,11 @@
 .body {
-  background-color: rgb(234, 234, 234);
+  background-image: url('../../images/flechette.jpg');
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.bg-container {
+  background-image: url('https://www.caminteresse.fr/imgre/fit/~1~CAM~2021~09~04~102033a7-fd8f-4650-bd9c-a56d560939d4.jpeg/1306x734/background-color/ffffff/quality/70/picture.jpg');
+
 }

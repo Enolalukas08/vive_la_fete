@@ -1,6 +1,15 @@
-/* Ajouter un margin top entre les cards */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .card {
-  margin-top: 220px;
+  flex: 1;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Appliquer une belle police au titre */
@@ -8,6 +17,8 @@
   font-family: "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 /* Appliquer une police différente à la description */
@@ -16,9 +27,25 @@
   font-size: 1rem;
   background-color: white; /* Fond blanc pour la description */
   padding: 10px; /* Ajouter un peu de padding pour l'espacement */
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
 }
 
 /* Mettre le prix et le nom du user en gras */
 .card-text strong {
   font-weight: bold;
+  text-transform: capitalize;
+}
+
+.btn {
+  border-radius: 10px;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.btn:hover{
+  background-color: purple;
+  text-transform: capitalize;
 }
