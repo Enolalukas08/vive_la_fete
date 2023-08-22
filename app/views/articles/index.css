@@ -1,0 +1,24 @@
+/* Ajouter un margin top entre les cards */
+.card {
+  margin-top: 220px;
+}
+
+/* Appliquer une belle police au titre */
+.card-title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Appliquer une police différente à la description */
+.card-text {
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  background-color: white; /* Fond blanc pour la description */
+  padding: 10px; /* Ajouter un peu de padding pour l'espacement */
+}
+
+/* Mettre le prix et le nom du user en gras */
+.card-text strong {
+  font-weight: bold;
+}

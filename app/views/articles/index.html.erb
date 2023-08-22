@@ -1,4 +1,30 @@
-<h1>Ceci est un index - Vive la fete</h1>
-<% @articles.each do |article| %>
-  <%= link_to 'show', article_path(article) %>
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="chemin/vers/votre/style.css">
+</head>
+<body>
+
+</body>
+</html>
+
+<h1>Ceci est un index</h1>
+<div class=row>
+  <% @articles.each do |article| %>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"><%=article.name%></h5>
+            <p class="card-text"><%=truncate(article.description, length: 70, separator: ' ', omission: '...')%></p>
+            <p class="card-text"><%=article.price%> €</p>
+            <p class="card-text"><%=article.user.first_name%></p>
+            <%= link_to 'View More', article_path(article), class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
