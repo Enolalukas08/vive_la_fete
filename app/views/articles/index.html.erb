@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
-  <link rel="stylesheet" type="text/css" href="chemin/vers/votre/style.css">
-</head>
-<body>
-
-</body>
-</html>
-
 <h1>Ceci est un index</h1>
 <div class=row>
   <% @articles.each do |article| %>
     <div class="col-md-4">
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+          <%# if <%= cl_image_tag article.photo.key, height: 300, width: 400, crop: :fill %>
+          <%# ELSE AFFICHER UNE IMAGE GÉNÉRIQUE/PAR DEFAUT%>
         <div class="card-body">
             <h5 class="card-title"><%=article.name%></h5>
             <p class="card-text"><%=truncate(article.description, length: 70, separator: ' ', omission: '...')%></p>
