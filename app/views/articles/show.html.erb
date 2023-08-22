@@ -1,12 +1,12 @@
 <div class=row>
-<h1><%=@article.name%></h1>
-    <div class="col-md-4">
-        <div class="card" style="width: 25rem;">
-          <% if @article.photo.present? %>
-            <%= cl_image_tag @article.photo.key, height: 300, width: 300, crop: :fill %>
-          <% else %>
-            <%= image_tag "logo.png" %>
-          <% end %>
+  <h1><%=@article.name%></h1>
+  <div class="col-md-4">
+      <div class="card" style="width: 25rem;">
+        <% if @article.photo.present? %>
+          <%= cl_image_tag @article.photo.key, height: 300, width: 300, crop: :fill %>
+        <% else %>
+          <%= image_tag "logo.png" %>
+        <% end %>
         <div class="card-body">
           <h2 class="card-title"><%=@article.name%></h2>
           <p class="card-text"><%=@article.description%></p>
@@ -14,5 +14,5 @@
           <p class="card-text"><%=@article.user.first_name%></p>
         </div>
       </div>
-    </div>
+  </div>
 </div>
