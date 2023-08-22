@@ -10,7 +10,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="body">
+  <%= render 'layouts/navbar'%>
+
+  <div class="container flex-grow-1">
     <%= yield %>
+  </div>
+
+  <%= render 'layouts/footer'%>
+
   </body>
 </html>
