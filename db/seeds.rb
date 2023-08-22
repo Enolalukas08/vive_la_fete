@@ -7,12 +7,12 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts 'creating'
-user_1 = User.create!(first_name: "Paul", last_name: "TOTO", email: "p33@gmail.com", password: "bobmùdksjngekld")
-user_2 = User.create!(first_name: "Michel", last_name: "TITI", email: "jichel.jdjd@gmail.com", password: "bobbylemzknq")
-user_3 = User.create!(first_name: "Jacques", last_name: "TUTU", email: "jacques.tumememetu@gmail.com",
-                      password: "bobbbbyme")
+user_1 = User.create!(first_name: "Paul", last_name: "TOTO", email: "joris@gmail.com", password: "bobmùdkseeeeeekld")
+user_2 = User.create!(first_name: "Michel", last_name: "TITI", email: "enole.d@gmail.com", password: "bobbyeeeezknq")
+user_3 = User.create!(first_name: "Jacques", last_name: "TUTU", email: "alex.tumememetu@gmail.com",
+                      password: "bobbbbyeeeeeeme")
 
-Article.create!(name: "enceinte", description: "bon état", price: 150, user: user_1)
-Article.create!(name: "table de ping-pong", description: "bon état", price: 400, user: user_2)
-Article.create!(name: "fléchettes", description: "bon état", price: 50, user: user_3)
+Article.create!(name: "enceinte", description: "Encdinte JBL neuve, surer qualité de son a hautes ou basse fréquences ne vous laissez pas impressionner par son débit sonor, et osez mettre le son a fond ! jklez:sbfyeaziuomqfhlegzvypsfiçomleazbvfypegsomfilhcbveilyuqhksjgomiflhjwkbvydgsiujlc,deosiufkghwuopdfimjlhbkzevqsygfuoimlhjkz:evscqdfyg!èçoizemljkhf:bchvgqksufygifuoiljk=dv:n;,bfglsuyiuhowdmjlckn", price: 150, user: user_1)
+Article.create!(name: "table de ping-pong", description: "une table de ping-pong ? A transfomer en table de bière pong ? Allez y elle a participé aux championnats du monde de bière pong a bordeaux ! Attention au filet il a un peu vécu, mais la table est pliante et pratique a transporter !", price: 400, user: user_2)
+Article.create!(name: "fléchettes", description: "Super jeux facile a prendre en main, ne craint pas grand chose car le jeux viens a l'origin du dickens a bordeaux ! Qualitée testé et approuvée par les clients du bar mais aussi par mes amis et moi ! a tester sans modération ! ", price: 50, user: user_3)
 puts 'finished'
