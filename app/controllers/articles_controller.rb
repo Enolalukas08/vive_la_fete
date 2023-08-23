@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     @article.user = current_user
     if @article.save
       puts "Article saved successfully!" # Debug output
-      redirect_to article_path(@article), notice: "Publié avec succès !", status: :see_other
+      redirect_to articles_path, notice: "Publié avec succès !", status: :see_other
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,8 +29,12 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article.update(article_params)
-    redirect_to article_path(@article.id)
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to articles_path, notice: "L'article a été mis à jour avec succès."
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
