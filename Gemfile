@@ -57,6 +57,8 @@ gem "simple_form", github: "heartcombo/simple_form"
 # gem devise
 gem "devise"
 
+#gem geocoder
+gem "geocoder"
 # gem cloudinary
 gem "cloudinary"
 

@@ -11,6 +11,13 @@ class ArticlesController < ApplicationController
 
   def show
     # set_article
+    @markers = [
+      {
+        lng: @article.longitude,
+        lat: @article.latitude
+      }
+
+    ]
     @booking = Booking.new
   end
 
