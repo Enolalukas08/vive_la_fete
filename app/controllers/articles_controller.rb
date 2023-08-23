@@ -11,6 +11,12 @@ class ArticlesController < ApplicationController
 
   def show
     # set_article
+    @markers = Article.geocoded.map do |article|
+      {
+        lng: article.longitude,
+        lat: article.latitude
+      }
+    end
   end
 
   def create
