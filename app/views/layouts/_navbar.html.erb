@@ -18,12 +18,26 @@
             <%= link_to "Publier un article", new_article_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Mon compte", articles_path, class: "dropdown-item" %>
-              <%= link_to "Mes reservations", bookings_path, class: "dropdown-item" %>
-              <%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
+          <% if current_user.profile_picture.attached? %>
+            <%= image_tag current_user.profile_picture,
+                        class: "profile-picture dropdown-toggle",
+                        id: "navbarDropdown",
+                        data: { bs_toggle: "dropdown" },
+                        'aria-haspopup': true,
+                        'aria-expanded': false %>
+          <% else %>
+            <%= image_tag "party.jpeg",
+                        class: "profile-picture dropdown-toggle",
+                        id: "navbarDropdown",
+                        data: { bs_toggle: "dropdown" },
+                        'aria-haspopup': true,
+                        'aria-expanded': false%>
+          <% end %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Mon compte", articles_path, class: "dropdown-item" %>
+                <%= link_to "Mes reservations", bookings_path, class: "dropdown-item" %>
+                <%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+              </div>
           </li>
         <% else %>
           <li class="nav-item">
