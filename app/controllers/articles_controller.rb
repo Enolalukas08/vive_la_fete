@@ -11,13 +11,14 @@ class ArticlesController < ApplicationController
 
   def show
     # set_article
+    @booking = Booking.new
   end
 
   def create
     @article = Article.new(article_params)
     @article.user = current_user
     if @article.save
-      puts "Article saved successfully!" # Debug output
+      puts "Article enregistré !" # Debug output
       redirect_to articles_path, notice: "Publié avec succès !", status: :see_other
     else
       render :new, status: :unprocessable_entity
