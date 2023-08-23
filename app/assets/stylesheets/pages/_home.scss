@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+.body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  padding-top: 70px;
+  margin-left: 50px;
+  margin-right: 50px;
+}

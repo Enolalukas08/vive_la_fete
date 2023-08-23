@@ -1,9 +1,10 @@
-<h1>Nouvel article</h1>
+<h1 class='card-title text-center'>Nouvel article</h1>
 <%= simple_form_for @article do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :price %>
   <%= f.input :photo, as: :file %>
-  <%# <%= f.association :movie %>
-  <%= f.submit "Publier", class: "btn btn-primary" %>
+  <div class="card-body d-flex flex-column align-items-center gap-3">
+    <%= f.submit "Publier", class: "btn btn-primary" %>
+  </div>
 <% end %>

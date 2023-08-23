@@ -1,2 +1,8 @@
-<h1>Ceci est une edit</h1>
-<%= render 'form'%>
+<h1>Editer un article</h1>
+<%= simple_form_for @article do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Mettre à jour", class: "btn btn-primary" %>
+<% end %>
