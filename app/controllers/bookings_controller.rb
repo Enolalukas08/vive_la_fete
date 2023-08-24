@@ -16,8 +16,8 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.article = Article.find(params[:article_id])
     if @booking.save
-      # redirect_to booking_path(@booking.id), notice: "Reservé avec succès !"
-      redirect_to articles_path, notice: "Reservé avec succès !"
+      redirect_to booking_path(@booking.id), notice: "Reservé avec succès !"
+      #redirect_to articles_path, notice: "Reservé avec succès !"
     else
       render :new, status: :unprocessable_entity
     end
