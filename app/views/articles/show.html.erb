@@ -14,11 +14,11 @@
             <p class="card-text"><strong> Utilisateur :<strong> <%=@article.user.first_name%></p>
             <%= link_to 'Modifier produit', edit_article_path, class: 'btn btn-secondary' %>
           </div>
+          <div data-controller="toggle" class="mt-5">
+            <button class="btn btn-outline-primary">Reservation</button>
+          <%= render "form_booking" %>
         </div>
       </div>
-    <div data-controller="toggle" class="mt-5">
-      <button class="btn btn-outline-primary">Reservation</button>
-      <%= render "form_booking" %>
     </div>
   </div>
 </div>
