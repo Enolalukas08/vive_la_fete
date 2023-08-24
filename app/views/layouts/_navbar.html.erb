@@ -1,15 +1,14 @@
 <div class="fixed-top navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "logo.png" %>
-    <% end %>
+    <div class="d-flex align-items-center">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "logo.png" %>
+      <% end %>
 
-    <h5 class="title nav-item active">Vive La Fête</h5>
+      <h5 class="title ml-3">Vive La Fête</h5>
+    </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse dropdown" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
@@ -18,25 +17,15 @@
           <li class="nav-item">
             <%= link_to "Publier un article", new_article_path, class: "nav-link" %>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown-toggle profile-picture" data-bs-toggle="dropdown" aria-expanded="false">
             <% if current_user.profile_picture.attached? %>
-              <%= image_tag current_user.profile_picture,
-                          class: "profile-picture dropdown-toggle",
-                          id: "navbarDropdown",
-                          data: { bs_toggle: "dropdown" },
-                          'aria-haspopup': true,
-                          'aria-expanded': false %>
+              <%= image_tag current_user.profile_picture%>
             <% else %>
-              <%= image_tag "party.png",
-                          class: "profile-picture dropdown-toggle",
-                          id: "navbarDropdown",
-                          data: { bs_toggle: "dropdown" },
-                          'aria-haspopup': true,
-                          'aria-expanded': false%>
+              <%= image_tag "party.png" %>
             <% end %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Mes articles", articles_path, class: "dropdown-item" %>
-                <%= link_to "Mes réservations", bookings_path, class: "dropdown-item" %>
+                <%= link_to "Mes articles", articles_path(current_user), class: "dropdown-item" %>
+                <%= link_to "Mes réservations", booking_path([:id]), class: "dropdown-item" %>
                 <%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
               </div>
           </li>

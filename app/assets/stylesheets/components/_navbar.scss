@@ -3,13 +3,21 @@
   background:  #000439;
 }
 
+.navbar-lewagon .profile-picture {
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown-menu {
+  background-color: #521963;
+  color: black;
+  right: 0; /* Ensure the dropdown menu appears on the right */
+}
+
 .nav-item a {
   color: white;
 }
 
-.nav-hover :hover{
-  color: palevioletred;
-}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -19,12 +27,15 @@
   width: 40px;
 }
 
-.dropdown-menu {
-  background-color: pink;
-  color: black;
-}
 
 .title {
   color: white;
+  margin: 0; /* Remove default margin */
+  font-weight: bold;
 }
 
+.nav-link {
+  &:hover {
+    color: red !important;
+  }
+}
