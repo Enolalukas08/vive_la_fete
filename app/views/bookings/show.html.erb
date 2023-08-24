@@ -1,4 +1,4 @@
-<div class = "container">
+<div class = "container container-booking ">
   <div class = "row">
     <div class = "col-md-6 d-flex flex-column align-items-center">
         <figure class="text-center">
@@ -9,8 +9,8 @@
             Hey <cite title="Source Title"><%= @booking.user.first_name %></cite> ton article t'attend pour faire la fête !
           </p>
         </figure>
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
+      <div class="card mb-3 card-radius" style="max-width: 540px;">
+        <div class="row g-0 ">
           <div class="col-md-4">
             <% if @article.photo.present? %>
                   <div class="card-bg-image" style="background-image: url('<%= cl_image_path @article.photo.key %>'); height: 100%; width: 100%; "></div>
@@ -29,8 +29,8 @@
         </div>
       </div>
     </div>
-    <div class = col-md-6>
-      <img src = "https://media.istockphoto.com/id/1279483477/photo/we-are-going-to-party-as-if-theres-no-tomorrow.jpg?s=612x612&w=0&k=20&c=wPmd1hxQEDxhG2P-OwDW3EJ0WoyuW-lEBsPa8O09bwU="/>
+    <div class = col-md-6 >
+      <img class ="rounded-image" src = "https://media.istockphoto.com/id/1279483477/photo/we-are-going-to-party-as-if-theres-no-tomorrow.jpg?s=612x612&w=0&k=20&c=wPmd1hxQEDxhG2P-OwDW3EJ0WoyuW-lEBsPa8O09bwU="/>
     </div>
   </div>
 </div>

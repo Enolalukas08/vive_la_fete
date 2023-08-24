@@ -39,3 +39,23 @@
     color: red !important;
   }
 }
+
+.dropdown-menu p {
+  color: white;
+  animation: fireworks 4s infinite;
+}
+
+@keyframes fireworks {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-100px) rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+    opacity: 1;
+  }
+}

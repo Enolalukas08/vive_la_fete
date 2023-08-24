@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Article.destroy_all
 User.destroy_all
+Booking.destroy_all
 puts 'creating'
 user_1 = User.create!(first_name: "Paul", last_name: "TOTO", email: "joriss@gmail.com", password: "bobmùdkseeeeeekld")
 user_2 = User.create!(first_name: "Michel", last_name: "TITI", email: "enola.d@gmail.com", password: "bobbyeeeezknq")
