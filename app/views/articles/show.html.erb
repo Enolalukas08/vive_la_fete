@@ -19,6 +19,7 @@
             </div>
           <% if @article.user == current_user %>
             <%= link_to 'Modifier produit', edit_article_path, class: 'btn btn-modifier btn-secondary' %>
+            <%= link_to "Supprimer l'article", article_path(@article), class: 'btn btn-modifier btn-secondary',  data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cet article ?" } %>
           <% else %>
             <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
               Reservation

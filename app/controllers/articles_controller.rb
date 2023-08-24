@@ -39,7 +39,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
+    # set_article
     if @article.update(article_params)
       redirect_to articles_path, notice: "L'article a été mis à jour avec succès."
     else
@@ -49,8 +49,11 @@ class ArticlesController < ApplicationController
 
   def destroy
     # set_article
-    @article.destroy
-    redirect_to articles_path, status: :see_other
+    if @article.destroy # Supprime l'article de la base de données
+      redirect_to articles_path, notice: "L'article a été supprimé avec succès."
+    else
+      redirect_to article_path(@article), alert: "Nous n'avons pas pu supprimer l'article"
+    end
   end
 
   private
