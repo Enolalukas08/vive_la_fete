@@ -7,6 +7,10 @@
   color: white;
 }
 
+.nav-hover :hover{
+  color: palevioletred;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -19,3 +23,8 @@
   background-color: pink;
   color: black;
 }
+
+.title {
+  color: white;
+}
+
