@@ -1,5 +1,36 @@
-<div class = container>
- <p>rjhueizr</p>
- 
-
+<div class = "container">
+  <div class = "row">
+    <div class = "col-md-6 d-flex flex-column align-items-center">
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <h1>Vos articles sont réservés</h1>
+          </blockquote>
+          <p small>
+            Hey <cite title="Source Title"><%= @booking.user.first_name %></cite> ton article t'attend pour faire la fête !
+          </p>
+        </figure>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <% if @article.photo.present? %>
+                  <div class="card-bg-image" style="background-image: url('<%= cl_image_path @article.photo.key %>'); height: 100%; width: 100%; "></div>
+                <% else %>
+                  <div class="card-bg-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= image_path "logo.png" %>'); height: 100%; width: 100%;"></div>
+                <% end %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= @article.name.capitalize %></h5>
+              <p class="card-text"><%=@article.description%></p>
+              <p class="card-text"><strong> Prix :</strong> <%=@article.price%> €</p>
+              <p class="card-text"><small class="text-muted"><%=@article.user.first_name%></small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = col-md-6>
+      <img src = "https://media.istockphoto.com/id/1279483477/photo/we-are-going-to-party-as-if-theres-no-tomorrow.jpg?s=612x612&w=0&k=20&c=wPmd1hxQEDxhG2P-OwDW3EJ0WoyuW-lEBsPa8O09bwU="/>
+    </div>
+  </div>
 </div>
