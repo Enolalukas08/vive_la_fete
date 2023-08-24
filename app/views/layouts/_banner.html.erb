@@ -3,5 +3,17 @@
     <h1> Vos meilleures soirées, à la maison !</h1>
     <p>Louez le matériel parfait de particulier à particulier et créez des soirées inoubliables à la maison !
         Des moments mémorables à portée de main.</p>
+        <div class="row justify-content-center">
+        <div class="col-sm-8 my-3">
+          <%= form_with url: articles_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Ecrivez un mot"
+          %>
+          <%= submit_tag "Chercher", name: "", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
