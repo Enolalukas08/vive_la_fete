@@ -27,8 +27,8 @@
                 <p >
                  Hey <cite title="Source Title"><%= current_user.first_name %></cite> prêt à faire la fête ?
                 </p>
-                <%= link_to "Mes articles", articles_path(current_user), class: "dropdown-item" %>
-                <%= link_to "Mes réservations", booking_path([:id]), class: "dropdown-item" %>
+                <%= link_to "Mes articles", my_articles_path, class: "dropdown-item" %>
+                <%= link_to "Mes réservations", my_bookings_path, class: "dropdown-item" %>
                 <%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
               </div>
           </li>
