@@ -1,14 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
 
 Article.destroy_all
 User.destroy_all
+
 puts 'creating'
 user_1 = User.create!(first_name: "Paul", last_name: "TOTO", email: "joriss@gmail.com", password: "bobmùdkseeeeeekld")
 user_2 = User.create!(first_name: "Michel", last_name: "TITI", email: "enola.l@gmail.com", password: "bobbyeeeezknq")
@@ -18,7 +12,6 @@ address_1 = "17 rue saint Rémi Bordeaux"
 address_2 = "15 rue du chai des farines Bordeaux"
 address_3 = "75 Cours du Médoc Bordeaux"
 
-# 1
 file = URI.open("https://res.cloudinary.com/dpjincxmo/image/upload/v1692885246/development/JBL_Partybox_710__Lifestyle_01_905x560px_moy9sr.jpg")
 article = Article.new(name: "Enceinte PartyBox JBL", description: "Enceinte JBL neuve, super pour toutes vos soirées avec son son déployé", price: 150, user: user_1, address: address_1)
 article.photo.attach(io: file, filename: "enceinteJBL.png", content_type: "image/png")
@@ -39,7 +32,6 @@ article = Article.new(name: "25 bouteilles de Chateau Margaux", description: "Su
 article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "image/png")
 article.save
 
-# 2
 file = URI.open("https://www.easylounge.com/Content/img/categories/image/ecrans-de-projection/ecran-projection-fixe.jpg")
 article = Article.new(name: "Ecran de cinema", description: "Un ecran de cinema portatif pour un weekend de pluie ou de forte chaleur devant une bonne série ! ", price: 150, user: user_1, address: address_1)
 article.photo.attach(io: file, filename: "enceinteJBL.png", content_type: "image/png")
