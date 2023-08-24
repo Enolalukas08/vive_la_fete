@@ -49,6 +49,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     # set_article
+
     if @article.destroy # Supprime l'article de la base de données
       redirect_to articles_path, notice: "L'article a été supprimé avec succès."
     else
