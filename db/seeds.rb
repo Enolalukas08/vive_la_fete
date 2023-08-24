@@ -3,6 +3,7 @@ require "open-uri"
 Article.destroy_all
 User.destroy_all
 
+
 puts 'creating'
 user_1 = User.create!(first_name: "Paul", last_name: "TOTO", email: "joriss@gmail.com", password: "bobmùdkseeeeeekld")
 user_2 = User.create!(first_name: "Michel", last_name: "TITI", email: "enola.l@gmail.com", password: "bobbyeeeezknq")
