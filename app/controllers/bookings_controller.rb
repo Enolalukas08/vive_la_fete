@@ -9,6 +9,8 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    @article = @booking.article
+    @booking.user = current_user
   end
 
   def create
