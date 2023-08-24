@@ -21,8 +21,6 @@ class ArticlesController < ApplicationController
       }
     ]
     @booking = Booking.new
-    @user = current_user
-    @belongs_to_user = article_belongs_to_user?(@article, @user)
   end
 
   def create
@@ -63,9 +61,5 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:name, :description, :price, :photo)
-  end
-
-  def article_belongs_to_user?(article, user)
-    article.user == user
   end
 end
