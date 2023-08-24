@@ -1,19 +1,25 @@
-<div class="container">
-  <div class="card-row">
+<%= render 'layouts/banner'%>
+
+<div class="container py-3">
+  <div class="row">
     <% @articles.each do |article| %>
-      <div class="col-md-4 justify-content-center">
-        <div class="card" style="width: 25rem;">
-          <% if article.photo.present? %>
-            <%= cl_image_tag article.photo.key, height: 300, width: 400, crop: :fill %>
-          <% else %>
-            <%= image_tag "logo.png" %>
-          <% end %>
-          <div class="card-body">
-              <h5 class="card-title"><%=article.name%></h5>
-              <p class="card-text"><%=truncate(article.description, length: 70, separator: ' ', omission: '...')%></p>
-              <p class="card-text">Prix : <%=article.price%> €</p>
-              <p class="card-text">Auteur : <%=article.user.first_name%></p>
-              <%= link_to 'Détail produit', article_path(article), class: 'btn btn-primary' %>
+      <div class="col-lg-4 col-md-6 pb-4">
+        <div class="card border rounded position-relative">
+          <div class="card-body d-flex flex-column align-items-center gap-3">
+            <div class="card-haut">
+                <h4 class="card-title text-center"><%= article.name.capitalize %></h4>
+              <% if article.photo.present? %>
+                <div class="card-bg-image" style="background-image: url('<%= cl_image_path article.photo.key %>'); height: 150px; width: 200px; "></div>
+              <% else %>
+                <div class="card-bg-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= image_path "logo.png" %>'); height: 150px; width: 200px;"></div>
+              <% end %>
+            </div>
+            <div class="card-text">
+              <p class="card-text"><%= truncate(article.description.capitalize, length: 70, separator: ' ', omission: '...') %></p>
+              <p class="card-text">Prix : <strong><%= article.price %></strong>€</p>
+              <p class="card-text">Utilisateur : <%= article.user.first_name %></p>
+            </div>
+          <%= link_to 'Détail produit', article_path(article), class: 'btn btn-primary' %>
           </div>
         </div>
       </div>

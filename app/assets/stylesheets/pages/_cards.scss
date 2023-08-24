@@ -1,42 +1,29 @@
-.card-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+// .card {
+//   margin-bottom: 20px;
+//   margin-top: 20px;
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   min-width: 0;
+//   word-wrap: break-word;
+//   background-clip: border-box;
+//   border: 1px solid rgba(0,0,0,.125);
+//   border-radius: 0.25rem;
+// }
+
+.card-body {
+  height: 100%;
+  padding-bottom: 25px;
 }
 
-.card {
-  flex: 1;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+/* Style pour les images de fond des cartes */
+.card-bg-image {
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
 }
 
-/* Appliquer une belle police au titre */
 .card-title {
-  font-family: "Helvetica Neue", sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: center;
-  text-transform: capitalize;
+  color: #000439;
 }
-
-/* Appliquer une police différente à la description */
-.card-text {
-  font-family: "Arial", sans-serif;
-  font-size: 1rem;
-  background-color: white; /* Fond blanc pour la description */
-  padding: 10px; /* Ajouter un peu de padding pour l'espacement */
-
-  &:first-letter {
-    text-transform: uppercase;
-  }
-}
-
-/* Mettre le prix et le nom du user en gras */
-.card-text strong {
-  font-weight: bold;
-  text-transform: capitalize;
-}
-
-
