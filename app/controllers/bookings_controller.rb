@@ -12,9 +12,12 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new#(booking_params)
+    @booking.user = current_user
+    @booking.article = Article.find(params[:article_id])
     if @booking.save
-      redirect_to booking_path(@booking.id), notice: "Publié avec succès !", status: :see_other
+      # redirect_to booking_path(@booking.id), notice: "Reservé avec succès !"
+      redirect_to articles_path, notice: "Reservé avec succès !"
     else
       render :new, status: :unprocessable_entity
     end
@@ -23,6 +26,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:name, :description, :price)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

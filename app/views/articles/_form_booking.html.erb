@@ -1,9 +1,12 @@
-<%= simple_form_for @booking do |f| %>
-<%= f.input :article_id,
+<%= simple_form_for [@article, @booking], data: { turbo: false} do |f| %>
+<%#= f.input :article_id,
             as: :hidden,
             input_html: {value: @article.id}%>
-<%= f.input :user_id,
+<%#= f.input :user_id,
             as: :hidden,
             input_html: {value: current_user.id}%>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+
   <%= f.submit "Reservez", class: "btn btn-primary" %>
 <% end %>
