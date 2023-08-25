@@ -12,6 +12,9 @@ user_3 = User.create!(first_name: "Jacques", last_name: "TUTU", email: "alexandr
 address_1 = "17 rue saint Rémi Bordeaux"
 address_2 = "15 rue du chai des farines Bordeaux"
 address_3 = "75 Cours du Médoc Bordeaux"
+address_4 = "34 rue Chapon Paris"
+address_5 = "66 rue Sadi Carnot Ligny"
+address_6 = "1 route de Léognan Villenave d'Ornon"
 
 file = URI.open("https://res.cloudinary.com/dpjincxmo/image/upload/v1692885246/development/JBL_Partybox_710__Lifestyle_01_905x560px_moy9sr.jpg")
 article = Article.new(name: "Enceinte PartyBox JBL", description: "Enceinte JBL neuve, super pour toutes vos soirées avec son son déployé", price: 150, user: user_1, address: address_1)
@@ -29,17 +32,17 @@ article.photo.attach(io: file, filename: "flechettes.png", content_type: "image/
 article.save
 
 file = URI.open("https://res.cloudinary.com/dpjincxmo/image/upload/v1692885245/development/chateaux_margot_n1d0qp.jpg")
-article = Article.new(name: "Chateau Margaux", description: "Superbes bouteilles de vin à deguster avec vos amis pour de belles soirées. Date : 1995", price: 150, user: user_1, address: address_1)
+article = Article.new(name: "Chateau Margaux", description: "Superbes bouteilles de vin à deguster avec vos amis pour de belles soirées. Date : 1995", price: 150, user: user_1, address: address_4)
 article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "image/png")
 article.save
 
 file = URI.open("https://www.easylounge.com/Content/img/categories/image/ecrans-de-projection/ecran-projection-fixe.jpg")
-article = Article.new(name: "Ecran de cinema", description: "Un ecran de cinema portatif pour un weekend de pluie ou de forte chaleur devant une bonne série ! ", price: 150, user: user_1, address: address_1)
+article = Article.new(name: "Ecran de cinema", description: "Un ecran de cinema portatif pour un weekend de pluie ou de forte chaleur devant une bonne série ! ", price: 150, user: user_1, address: address_5)
 article.photo.attach(io: file, filename: "enceinteJBL.png", content_type: "image/png")
 article.save
 
 file = URI.open("https://media.cnn.com/api/v1/images/stellar/prod/211115143331-marijuana-joint-stock.jpg?q=x_0,y_130,h_1406,w_2500,c_crop/h_720,w_1280")
-article = Article.new(name: "Marie Jeanne", description: "Pour vos meilleurs gateaux de soirée, n'hésitez pas à me contacter. POur plus d'un kilo, merci de reserver au moins 1 semaine à l'avance !", price: 70, user: user_2, address: address_2)
+article = Article.new(name: "Marie Jeanne", description: "Pour vos meilleurs gateaux de soirée, n'hésitez pas à me contacter. POur plus d'un kilo, merci de reserver au moins 1 semaine à l'avance !", price: 70, user: user_2, address: address_6)
 article.photo.attach(io: file, filename: "MarieJeanne.png", content_type: "image/png")
 article.save
 
