@@ -62,7 +62,6 @@ article = Article.new(name: "Enceinte PartyBox JBL", description: "Enceinte JBL 
 article.photo.attach(io: file, filename: "enceinteJBL.png", content_type: "image/png")
 article.save
 
-# 2 --- MODIFICATIONS
 file = URI.open("https://meilleurtest.fr/wp-content/uploads/2022/08/comparatif-enceinte-bluetooth-lumineuse.jpg")
 article = Article.new(name: "Enceinte Lumineuse", description: "Apportez de l'ambiance à votre soirée avec cette enceinte Bluetooth dotée de lumières LED synchronisées avec la musique. Créez une atmosphère festive où que vous soyez.", price: 70, user: user_1, address: address_1)
 article.photo.attach(io: file, filename: "enceintelumineuse.png", content_type: "image/png")
@@ -89,7 +88,7 @@ article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "i
 article.save
 
 # 3--- MODIFICATIONS
-file = URI.open("https://media.istockphoto.com/id/1277521441/fr/photo/narguil%C3%A9-fumant-sur-le-fond-d[…]12&w=0&k=20&c=T2rcmvRs5EfUd6c9U7X_ged6xmzUo2bsJrUjSe9FvsE=")
+file = URI.open("https://www.filsantejeunes.com/wp-content/uploads/2022/09/Chicha.jpg")
 article = Article.new(name: "Bar à Chicha", description: "Bar à Chicha Élégant : Offrez à vos invités une expérience unique avec un bar à chicha élégamment présenté. Proposez une variété de saveurs pour créer une ambiance détendue et sophistiquée.", price: 70, user: user_1, address: address_1)
 article.photo.attach(io: file, filename: "enceintelumineuse.png", content_type: "image/png")
 article.save
