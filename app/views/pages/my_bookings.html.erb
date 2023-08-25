@@ -1,3 +1,41 @@
-<% @my_bookings.each do |booking| %>
-  <%= booking.article.name %>
-<% end %>
+
+<div class="container container-booking">
+  <figure class="text-center">
+          <blockquote class="blockquote">
+            <h1>Liste de vos réservations ! 🤪</h1>
+          </blockquote>
+          <p small>
+            Hey <cite title="Source Title"><%= current_user.first_name %></cite> tes article t'attendent pour faire la fête !
+          </p>
+        </figure>
+        <div class="image-container">
+          <img class="rounded-image" text-align: center src="https://i.pinimg.com/originals/43/23/1a/43231a95ede123d95166acfdeabc216f.gif"/>
+        </div>
+        <% @my_bookings.each do |booking| %>
+          <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+        <div class="card mb-3 card-radius" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <% if booking.article.photo.present? %>
+                <div class="card-bg-image" style="background-image: url('<%= cl_image_path booking.article.photo.key %>'); height: 100%; width: 100%; "></div>
+              <% else %>
+                <div class="card-bg-image" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('<%= image_path "logo.png" %>'); height: 100%; width: 100%;"></div>
+              <% end %>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title"><%= booking.article.name.capitalize %></h5>
+                <p class="card-text"><%= booking.article.description %></p>
+                <h6 class="card-text"><strong> Prix :</strong> <%= booking.article.price %> €</h6>
+                <p class="card-text"><small class="text-muted"><%= booking.article.user.first_name %></small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+      </div>
+    </div>
+  <% end %>
+</div>
