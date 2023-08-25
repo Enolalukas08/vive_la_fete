@@ -1,4 +1,28 @@
-<% @my_articles.each do |article| %>
-  <%= article.name %>
-
-<% end %>
+<div class="container container-booking">
+  <figure class="text-center">
+    <blockquote class="blockquote">
+      <h1>Liste de vos réservations ! 🤪</h1>
+    </blockquote>
+    <p small>
+      Hey <cite title="Source Title"><%= current_user.first_name %></cite>, tes articles t'attendent pour faire la fête !
+    </p>
+  </figure>
+  <div class="image-container">
+    <img class="rounded-image" style="text-align: center;" src="https://usagif.com/wp-content/uploads/upgifsok/party-10.gif" alt="Image d'arrière-plan"/>
+  </div>
+  <div class="row">
+    <% @my_articles.each do |article| %>
+      <div class="col-md-6">
+        <div class="card mb-3 card-radius" style="max-width: 540px;">
+          <div class="card-bg-image" style="background-image: <%= article.photo.present? ? 'url(' + cl_image_path(article.photo.key) + ')' : 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(' + image_path('logo.png') + ')' %>; height: 100%; width: 100%;"></div>
+          <div class="card-body">
+            <h5 class="card-title"><%= article.name.capitalize %></h5>
+            <p class="card-text"><%= article.description %></p>
+            <h6 class="card-text"><strong>Prix :</strong> <%= article.price %> €</h6>
+            <p class="card-text"><small class="text-muted"><%= article.user.first_name %></small></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
