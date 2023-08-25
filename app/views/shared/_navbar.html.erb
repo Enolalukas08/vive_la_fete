@@ -17,20 +17,20 @@
           <li class="nav-item">
             <%= link_to "Publier un article", new_article_path, class: "nav-link" %>
           </li>
-          <li class="nav-item dropdown-toggle profile-picture" data-bs-toggle="dropdown" aria-expanded="false">
+
+          <li class="nav-item dropdown-toggle profile-picture">
             <% if current_user.profile_picture.attached? %>
-              <%= image_tag current_user.profile_picture%>
+              <%= image_tag current_user.profile_picture, data: { bs_toggle:"dropdown"},  aria_expanded: "false" %>
             <% else %>
-              <%= image_tag "party.png" %>
+              <%= image_tag "party.png", data: { bs_toggle:"dropdown"},  aria_expanded: "false"  %>
             <% end %>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" >
-                <p >
-                 Hey <cite title="Source Title"><%= current_user.first_name %></cite> prêt à faire la fête ?
-                </p>
-                <%= link_to "Mes articles", my_articles_path, class: "dropdown-item" %>
-                <%= link_to "Mes réservations", my_bookings_path, class: "dropdown-item" %>
-                <%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-              </div>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" >
+              <p >
+                Hey <cite title="Source Title"><%= current_user.first_name %></cite> prêt à faire la fête ?
+              </p>
+              <%= link_to "Mes réservations", my_bookings_path, class: "dropdown-item" %>
+              <%= link_to "Mes articles", my_articles_path, class: "dropdown-item" %>
+              <%= link_to "Se déconnecter", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
         <% else %>

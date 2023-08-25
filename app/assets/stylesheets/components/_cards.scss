@@ -1,19 +1,13 @@
-// .card {
-//   margin-bottom: 20px;
-//   margin-top: 20px;
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   min-width: 0;
-//   word-wrap: break-word;
-//   background-clip: border-box;
-//   border: 1px solid rgba(0,0,0,.125);
-//   border-radius: 0.25rem;
-// }
-
-.card-body {
-  height: 100%;
+.card {
+  border: 1px solid #000439;
+  border-radius: 15px !important;
+  box-shadow: 5px 5px 10px rgba(96, 1, 85, 0.3);
+  height: 430px;
   padding-bottom: 25px;
+}
+
+.card-show {
+  height: 500px !important;
 }
 
 
@@ -27,9 +21,4 @@
 .card-title {
   color: #000439;
   font-weight: bold;
-}
-
-.card-radius {
-  border-radius: 15px !important;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
