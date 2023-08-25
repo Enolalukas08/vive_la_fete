@@ -1,15 +1,13 @@
 <div class = "container container-booking ">
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <h1>Votre article est réservé ! 🤪</h1>
+        </blockquote>
+        <p small> Hey <cite title="Source Title"><%= @booking.user.first_name %></cite> ton article t'attend pour faire la fête !</p>
+      </figure>
   <div class = "row">
     <div class = "col-md-6 d-flex flex-column align-items-center">
-        <figure class="text-center">
-          <blockquote class="blockquote">
-            <h1>Votre article est réservé ! 🤪</h1>
-          </blockquote>
-          <p small>
-            Hey <cite title="Source Title"><%= @booking.user.first_name %></cite> ton article t'attend pour faire la fête !
-          </p>
-        </figure>
-      <div class="card mb-3 card-radius" style="max-width: 540px;">
+      <div class="card card-body mb-3" style="max-width: 540px;">
         <div class="row g-0 ">
           <div class="col-md-4">
             <% if @article.photo.present? %>
@@ -19,21 +17,20 @@
             <% end %>
           </div>
           <div class="col-md-8">
-          <div class="card-body card-booking">
-            <h5 class="card-title"><%= @article.name.capitalize %></h5>
-            <p class="card-text"><%=@article.description%></p>
-            <h6 class="card-text"><strong> Prix :</strong> <%=@article.price%> €</h6>
-            <p class="card-text"><small class="text-muted"><%=@article.user.first_name%></small></p>
-
-            <% if @booking %>
-              <p class="card-text">Date de début de réservation : <br> <%= @booking.start_date %></p>
-              <p class="card-text">Date de fin de réservation : <%= @booking.end_date %></p>
-            <% else %>
-              <p class="card-text">Pas de réservation en cours.</p>
-            <% end %>
-          </div>
-        </div>
-
+            <div class="card-body">
+              <h5 class="card-title"><%= @article.name.capitalize %></h5>
+              <p class="card-text"><%=@article.description%></p>
+              <p class="card-text"><strong> Prix :</strong> <%=@article.price%> €</p>
+              <p class="card-text"><small class="text-muted"><%=@article.user.first_name%></small></p>
+              <% if @booking %>
+                <h6><strong> Dates de réservation : </strong></h6>
+                <p class="card-text col-md-6'">Début :<br> <strong><%= @booking.start_date %></strong></p>
+                <p class="card-text col-md-6'"> Fin:<br> <strong><%= @booking.end_date %></strong></p>
+                <p class="card-text">Adresse :<br> <strong><%= @article.address %></strong></p>
+              <% else %>
+                <p class="card-text">Pas de réservation en cours.</p>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>

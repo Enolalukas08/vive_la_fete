@@ -11,6 +11,20 @@
   padding: 10px 10px 10px 10px ;
 }
 
+.card-booking {
+  height: 430px !important;
+  padding: 10px 10px 10px 10px ;
+}
+
+.card-booking-articles {
+  height: 350px !important;
+  padding: 10px 10px 10px 10px ;
+}
+
+.card-body {
+  height: 100%;
+  padding-bottom: 25px
+}
 
 /* Style pour les images de fond des cartes */
 .card-bg-image {
@@ -18,13 +32,24 @@
   background-position: center;
   border-radius: 5px;
 }
+.card-bg-image-booking {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.card-bg-image-my-articles {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 200px;
+  border-radius: 5px;
+}
+
 
 .card-title {
   color: #000439;
   font-weight: bold;
-}
-
-.card-booking {
-    height: 100%;
-    padding-bottom: 25px;
 }
