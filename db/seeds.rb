@@ -47,28 +47,13 @@ article = Article.new(name: "Marie Jeanne", description: "Pour vos meilleurs gat
 article.photo.attach(io: file, filename: "MarieJeanne.png", content_type: "image/png")
 article.save
 
-file = URI.open("https://www.salondete.fr/img/photos/table-basse-lumineuse-led-120-cm-rectangulaire-hd.jpg")
-article = Article.new(name: "table basse piscine", description: "Super jeux facile a prendre en main, ne craint pas grand chose car le jeux viens a l'origin du dickens a bordeaux ! Qualitée testé et approuvée par les clients du bar mais aussi par mes amis et moi ! a tester sans modération ! ", price: 50, user: user_3, address: address_3)
-article.photo.attach(io: file, filename: "flechettes.png", content_type: "image/png")
-article.save
-
-file = URI.open("https://res.cloudinary.com/dpjincxmo/image/upload/v1692885245/development/chateaux_margot_n1d0qp.jpg")
-article = Article.new(name: "Chateau Margaux", description: "Superbes bouteilles de vin à deguster avec vos amis pour de belles soirées. Date : 1995", price: 150, user: user_1, address: address_1)
-article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "image/png")
-article.save
-
-file = URI.open("https://res.cloudinary.com/dpjincxmo/image/upload/v1692885246/development/JBL_Partybox_710__Lifestyle_01_905x560px_moy9sr.jpg")
-article = Article.new(name: "Enceinte PartyBox JBL", description: "Enceinte JBL neuve, super pour toutes vos soirées avec son son déployé", price: 34, user: user_1, address: address_1)
-article.photo.attach(io: file, filename: "enceinteJBL.png", content_type: "image/png")
-article.save
-
 file = URI.open("https://meilleurtest.fr/wp-content/uploads/2022/08/comparatif-enceinte-bluetooth-lumineuse.jpg")
 article = Article.new(name: "Enceinte Lumineuse", description: "Apportez de l'ambiance à votre soirée avec cette enceinte Bluetooth dotée de lumières LED synchronisées avec la musique. Créez une atmosphère festive où que vous soyez.", price: 70, user: user_1, address: address_1)
 article.photo.attach(io: file, filename: "enceintelumineuse.png", content_type: "image/png")
 article.save
 
 file = URI.open("https://www.laboutiqueducocktail.com/wp-content/uploads/2023/05/Kit-Cocktail-Premium-350ml-800x800.jpg")
-article = Article.new(name: "Kit de Cocktails Artisanaux", description: "Élevez votre soirée avec ce kit de cocktails artisanaux comprenant des ingrédients haut de gamme et des recettes uniques. Impressionnez vos invités en devenant un mixologue expert !!!", price: 20, user: user_2, address: address_2)
+article = Article.new(name: "Kit de Cocktails", description: "Élevez votre soirée avec ce kit de cocktails artisanaux comprenant des ingrédients haut de gamme et des recettes uniques. Impressionnez vos invités en devenant un mixologue expert !!!", price: 20, user: user_2, address: address_2)
 article.photo.attach(io: file, filename: "pinpongtable.png", content_type: "image/png")
 article.save
 
@@ -78,12 +63,12 @@ article.photo.attach(io: file, filename: "flechettes.png", content_type: "image/
 article.save
 
 file = URI.open("https://s.alicdn.com/@sc04/kf/H10678f87b45541df8bdfd9607ebca8e1i.jpg_280x280.jpg")
-article = Article.new(name: "Machine à Fumée avec LEDs:", description: "Donnez une dimension spectaculaire à votre soirée avec cette machine à fumée qui crée des effets visuels époustouflants grâce à ses LEDs colorées. Idéal pour les soirées dansantes.", price: 150, user: user_1, address: address_5)
+article = Article.new(name: "Machine à Fumée", description: "Donnez une dimension spectaculaire à votre soirée avec cette machine à fumée qui crée des effets visuels époustouflants grâce à ses LEDs colorées. Idéal pour les soirées dansantes.", price: 150, user: user_1, address: address_5)
 article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "image/png")
 article.save
 
 file = URI.open("https://wholewood.fr/10541-large_default/coffret-9-jeux-de-societe-bois-philos.jpg")
-article = Article.new(name: "Jeux de Société Interactifs", description: "Garantissez des heures de divertissement avec une sélection de jeux de société interactifs. Des rires et des défis attendent vos invités lors de cette soirée mémorable.", price: 2, user: user_1, address: address_5)
+article = Article.new(name: "Jeux de Société", description: "Garantissez des heures de divertissement avec une sélection de jeux de société interactifs. Des rires et des défis attendent vos invités lors de cette soirée mémorable.", price: 2, user: user_1, address: address_5)
 article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "image/png")
 article.save
 
@@ -93,13 +78,13 @@ article = Article.new(name: "Bar à Chicha", description: "Bar à Chicha Éléga
 article.photo.attach(io: file, filename: "enceintelumineuse.png", content_type: "image/png")
 article.save
 
-file = URI.open("https://www.gilbertholl.com/wp-content/uploads/2021/04/45445-310-chef-1245676_640.jpg")
+file = URI.open("https://d25bw6vpcxy1uk.cloudfront.net/media/image/36/3b/30/diy-best-day-fotorahmen-1dM1vdMrQYMuXe_600x600@2x.webp")
 article = Article.new(name: "Thèmes pour Photo", description: "Mettez en place des coins photo avec différents thèmes amusants. Fournissez des accessoires et des arrière-plans pour que vos invités puissent capturer des souvenirs uniques. Transformez votre espace en un ciel étoilé en utilisant ce projecteur. Parfait pour une soirée relaxante ou pour ajouter une touche de magie à votre événement. Qualitée testé et approuvée par mes enfants et moi ! a tester sans modération ! ", price: 5, user: user_2, address: address_3)
 article.photo.attach(io: file, filename: "flechettes.png", content_type: "image/png")
 article.save
 
 file = URI.open("https://www.gilbertholl.com/wp-content/uploads/2021/04/45445-310-chef-1245676_640.jpg")
-article = Article.new(name: "Service de Traiteur Gastronomique:", description: "Réjouissez les papilles de vos convives avec un service de traiteur proposant des mets gastronomiques. Des délices exquis pour une soirée des plus délicieuses.", price: 50, user: user_1, address: address_5)
+article = Article.new(name: "Service Traiteur", description: "Réjouissez les papilles de vos convives avec un service de traiteur proposant des mets gastronomiques. Des délices exquis pour une soirée des plus délicieuses.", price: 50, user: user_1, address: address_5)
 article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "image/png")
 article.save
 

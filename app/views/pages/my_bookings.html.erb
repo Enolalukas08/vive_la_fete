@@ -17,7 +17,7 @@
           <div class="card-bg-image-booking mx-auto mt-2" style="background-image: <%= booking.article.photo.present? ? 'url(' + cl_image_path(booking.article.photo.key) + ')' : 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(' + image_path('logo.png') + ')' %>"></div>
           <div class="card-body">
             <h5 class="card-title text-center"><%= booking.article.name.capitalize %></h5>
-            <p class="card-text"><%= booking.article.description %></p>
+            <p class="card-text"><%= truncate(booking.article.description, length: 150, separator: ' ', omission: '...') %></p>
             <h6 class="card-text"><strong>Prix :</strong> <%= booking.article.price %> €</h6>
             <h6><strong> Dates de réservation : </strong></h6>
             <p class="card-text col-md-6">Début :<br> <strong><%= booking.start_date %></strong></p>

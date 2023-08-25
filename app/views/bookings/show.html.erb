@@ -24,8 +24,10 @@
               <p class="card-text"><small class="text-muted"><%=@article.user.first_name%></small></p>
               <% if @booking %>
                 <h6><strong> Dates de réservation : </strong></h6>
-                <p class="card-text col-md-6'">Début :<br> <strong><%= @booking.start_date %></strong></p>
-                <p class="card-text col-md-6'"> Fin:<br> <strong><%= @booking.end_date %></strong></p>
+                <div class="row">
+                  <p class="card-text col-md-6">Début :<br> <strong><%= @booking.start_date %></strong></p>
+                  <p class="card-text col-md-6"> Fin:<br> <strong><%= @booking.end_date %></strong></p>
+                </div>
                 <p class="card-text">Adresse :<br> <strong><%= @article.address %></strong></p>
               <% else %>
                 <p class="card-text">Pas de réservation en cours.</p>
