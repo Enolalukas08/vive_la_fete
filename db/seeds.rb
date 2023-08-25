@@ -29,7 +29,7 @@ article.photo.attach(io: file, filename: "flechettes.png", content_type: "image/
 article.save
 
 file = URI.open("https://res.cloudinary.com/dpjincxmo/image/upload/v1692885245/development/chateaux_margot_n1d0qp.jpg")
-article = Article.new(name: "25 bouteilles de Chateau Margaux", description: "Superbes bouteilles de vin à deguster avec vos amis pour de belles soirées. Date : 1995", price: 150, user: user_1, address: address_1)
+article = Article.new(name: "Chateau Margaux", description: "Superbes bouteilles de vin à deguster avec vos amis pour de belles soirées. Date : 1995", price: 150, user: user_1, address: address_1)
 article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "image/png")
 article.save
 
@@ -49,7 +49,7 @@ article.photo.attach(io: file, filename: "flechettes.png", content_type: "image/
 article.save
 
 file = URI.open("https://res.cloudinary.com/dpjincxmo/image/upload/v1692885245/development/chateaux_margot_n1d0qp.jpg")
-article = Article.new(name: "25 bouteilles de Chateau Margaux", description: "Superbes bouteilles de vin à deguster avec vos amis pour de belles soirées. Date : 1995", price: 150, user: user_1, address: address_1)
+article = Article.new(name: "Chateau Margaux", description: "Superbes bouteilles de vin à deguster avec vos amis pour de belles soirées. Date : 1995", price: 150, user: user_1, address: address_1)
 article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "image/png")
 article.save
 
@@ -69,7 +69,7 @@ article.photo.attach(io: file, filename: "flechettes.png", content_type: "image/
 article.save
 
 file = URI.open("https://res.cloudinary.com/dpjincxmo/image/upload/v1692885245/development/chateaux_margot_n1d0qp.jpg")
-article = Article.new(name: "25 bouteilles de Chateau Margaux", description: "Superbes bouteilles de vin à deguster avec vos amis pour de belles soirées. Date : 1995", price: 150, user: user_1, address: address_1)
+article = Article.new(name: "Chateau Margaux", description: "Superbes bouteilles de vin à deguster avec vos amis pour de belles soirées. Date : 1995", price: 150, user: user_1, address: address_1)
 article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "image/png")
 article.save
 
