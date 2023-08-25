@@ -3,7 +3,7 @@
     <div class = "col-md-6 d-flex flex-column align-items-center">
         <figure class="text-center">
           <blockquote class="blockquote">
-            <h1>Vos articles sont réservés</h1>
+            <h1>Votre article est réservé ! 🤪</h1>
           </blockquote>
           <p small>
             Hey <cite title="Source Title"><%= @booking.user.first_name %></cite> ton article t'attend pour faire la fête !
@@ -22,7 +22,7 @@
             <div class="card-body">
               <h5 class="card-title"><%= @article.name.capitalize %></h5>
               <p class="card-text"><%=@article.description%></p>
-              <p class="card-text"><strong> Prix :</strong> <%=@article.price%> €</p>
+              <h6 class="card-text"><strong> Prix :</strong> <%=@article.price%> €</h6>
               <p class="card-text"><small class="text-muted"><%=@article.user.first_name%></small></p>
             </div>
           </div>
