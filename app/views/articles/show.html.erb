@@ -12,11 +12,11 @@
           <p> <strong> Description :</strong> <%=@article.description%></p>
           <p><strong> Prix :</strong> <%=@article.price%> €</p>
           <p><strong> Utilisateur :</strong> <%=@article.user.first_name%></p>
-          <div class="text-center">
             <% if @article.user == current_user %>
-              <%= link_to 'Modifier produit', edit_article_path, class: 'btn btn-modifier btn-primary' %>
-              <%= link_to "Supprimer l'article", article_path(@article), class: 'btn btn-modifier btn-primary',  data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cet article ?" } %>
-          </div>
+              <div class="text-center">
+                  <%= link_to 'Modifier', edit_article_path, class: 'btn btn-primary btn-show col-md-6' %>
+                  <%= link_to "Supprimer", article_path(@article), class: 'btn btn-danger btn-show col-md-6',  data: {turbo_method: :delete, turbo_confirm: "Êtes-vous sûr de vouloir supprimer cet article ?" } %>
+              </div>
           <% else %>
             <div class="text-center">
               <button class="btn btn-show btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -27,8 +27,8 @@
         </div>
       </div>
     </div>
-        <div class=col-md-8>
-          <div style="width: 100%; height: 500px;"
+        <div class= "col-md-8">
+          <div style="width: 100%; height: 550px;"
             data-controller="map"
             data-map-markers-value="<%= @markers.to_json %>"
             data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
