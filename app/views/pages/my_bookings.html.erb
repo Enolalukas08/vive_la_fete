@@ -12,15 +12,18 @@
   </div>
   <div class="row">
     <% @my_bookings.each do |booking| %>
-      <div class="col-md-6">
-        <div class="card mb-3 card-radius" style="max-width: 540px;">
-          <div class="card-bg-image" style="background-image: <%= booking.article.photo.present? ? 'url(' + cl_image_path(booking.article.photo.key) + ')' : 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(' + image_path('logo.png') + ')' %>; height: 100%; width: 100%;"></div>
+      <div class="col-md-6 d-flex flex-column align-items-center">
+        <div class="card position-relative card-booking mb-3 card-radius" style="max-width: 540px;">
+          <div class="card-bg-image-booking mx-auto mt-2" style="background-image: <%= booking.article.photo.present? ? 'url(' + cl_image_path(booking.article.photo.key) + ')' : 'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(' + image_path('logo.png') + ')' %>"></div>
           <div class="card-body">
-            <h5 class="card-title"><%= booking.article.name.capitalize %></h5>
+            <h5 class="card-title text-center"><%= booking.article.name.capitalize %></h5>
             <p class="card-text"><%= booking.article.description %></p>
             <h6 class="card-text"><strong>Prix :</strong> <%= booking.article.price %> €</h6>
-            <p class="card-text"><small class="text-muted"><%= booking.article.user.first_name %></small></p>
+            <h6><strong> Dates de réservation : </strong></h6>
+            <p class="card-text col-md-6">Début :<br> <strong><%= booking.start_date %></strong></p>
+            <p class="card-text col-md-6"> Fin:<br> <strong><%= booking.end_date %></strong></p>
           </div>
+            <p class="card-text"><small class="text-muted"><%= booking.article.user.first_name %></small></p>
         </div>
       </div>
     <% end %>
