@@ -2,11 +2,12 @@
 <%= simple_form_for @article do |f| %>
   <%= f.input :name,
                 required: true,
-                hint: " 15 characters maximum",
+                label: "Nom",
+                hint: " 15 caractères maximum",
                 input_html: { maxlength: 15, size: 40} %>
   <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :address %>
+  <%= f.input :price, label: "Prix" %>
+  <%= f.input :address, label: "Adresse" %>
   <%= f.input :photo, as: :file %>
   <div class="card-body d-flex flex-column align-items-center gap-3">
     <%= f.submit "Publier", class: "btn btn-primary" %>

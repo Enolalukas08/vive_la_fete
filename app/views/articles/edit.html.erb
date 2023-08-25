@@ -2,10 +2,12 @@
 <%= simple_form_for @article do |f| %>
   <%= f.input :name,
                 required: true,
-                hint: " 15 characters maximum",
-                input_html: { maxlength: 15, size: 40} %>  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :address %>
+                label: "Nom",
+                hint: " 15 caractères maximum",
+                input_html: { maxlength: 15, size: 40} %>
+  <%= f.input :description %>
+  <%= f.input :price, label: "Prix" %>
+  <%= f.input :address, label: "Adresse" %>
   <%= f.input :photo, as: :file %>
   <%= f.submit "Mettre à jour", class: "btn btn-primary" %>
 <% end %>
