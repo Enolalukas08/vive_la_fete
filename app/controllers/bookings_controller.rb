@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new#(booking_params)
+    @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.article = Article.find(params[:article_id])
     if @booking.save

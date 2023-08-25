@@ -3,8 +3,8 @@ require "open-uri"
 Article.destroy_all
 User.destroy_all
 
-
 puts 'creating'
+
 user_1 = User.create!(first_name: "Paul", last_name: "TOTO", email: "joriss@gmail.com", password: "bobmùdkseeeeeekld")
 user_2 = User.create!(first_name: "Michel", last_name: "TITI", email: "enola.l@gmail.com", password: "bobbyeeeezknq")
 user_3 = User.create!(first_name: "Jacques", last_name: "TUTU", email: "alexandre.tumememetu@gmail.com",
@@ -72,6 +72,5 @@ file = URI.open("https://res.cloudinary.com/dpjincxmo/image/upload/v1692885245/d
 article = Article.new(name: "Chateau Margaux", description: "Superbes bouteilles de vin à deguster avec vos amis pour de belles soirées. Date : 1995", price: 150, user: user_1, address: address_1)
 article.photo.attach(io: file, filename: "chateaumargeaux.png", content_type: "image/png")
 article.save
-
 
 puts 'finished'
