@@ -19,7 +19,7 @@
           </li>
 
           <li class="nav-item dropdown-toggle profile-picture">
-            <% if current_user.profile_picture.attached? %>
+            <% if current_user.profile_picture.present? %>
               <%= image_tag current_user.profile_picture, data: { bs_toggle:"dropdown"},  aria_expanded: "false" %>
             <% else %>
               <%= image_tag "party.png", data: { bs_toggle:"dropdown"},  aria_expanded: "false"  %>

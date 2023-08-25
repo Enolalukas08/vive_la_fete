@@ -7,9 +7,14 @@
 }
 
 .card-show {
-  height: 500px !important;
+  height: 550px !important;
+  padding: 10px 10px 10px 10px ;
 }
 
+.card-body {
+  height: 100%;
+  padding-bottom: 25px
+}
 
 /* Style pour les images de fond des cartes */
 .card-bg-image {
