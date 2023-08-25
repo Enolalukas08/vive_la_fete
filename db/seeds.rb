@@ -47,10 +47,10 @@ article = Article.new(name: "Marie Jeanne", description: "Pour vos meilleurs gat
 article.photo.attach(io: file, filename: "MarieJeanne.png", content_type: "image/png")
 article.save
 
-file = URI.open("https://meilleurtest.fr/wp-content/uploads/2022/08/comparatif-enceinte-bluetooth-lumineuse.jpg")
-article = Article.new(name: "Enceinte Lumineuse", description: "Apportez de l'ambiance à votre soirée avec cette enceinte Bluetooth dotée de lumières LED synchronisées avec la musique. Créez une atmosphère festive où que vous soyez.", price: 70, user: user_1, address: address_1)
-article.photo.attach(io: file, filename: "enceintelumineuse.png", content_type: "image/png")
-article.save
+# file = URI.open("https://meilleurtest.fr/wp-content/uploads/2022/08/comparatif-enceinte-bluetooth-lumineuse.jpg")
+# article = Article.new(name: "Enceinte Lumineuse", description: "Apportez de l'ambiance à votre soirée avec cette enceinte Bluetooth dotée de lumières LED synchronisées avec la musique. Créez une atmosphère festive où que vous soyez.", price: 70, user: user_1, address: address_1)
+# article.photo.attach(io: file, filename: "enceintelumineuse.png", content_type: "image/png")
+# article.save
 
 file = URI.open("https://www.laboutiqueducocktail.com/wp-content/uploads/2023/05/Kit-Cocktail-Premium-350ml-800x800.jpg")
 article = Article.new(name: "Kit de Cocktails", description: "Élevez votre soirée avec ce kit de cocktails artisanaux comprenant des ingrédients haut de gamme et des recettes uniques. Impressionnez vos invités en devenant un mixologue expert !!!", price: 20, user: user_2, address: address_2)
